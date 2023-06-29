@@ -1,0 +1,45 @@
+#N canvas 759 404 450 300 10;
+#X obj 17 5 loadbang;
+#X obj 17 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array sample 233873 float 2;
+#X coords 0 1 233873 -1 210 70 1 0 0;
+#X restore 212 95 graph;
+#X obj 18 74 soundfiler;
+#X obj 34 265 outlet~;
+#X obj 143 124 tgl 15 0 empty empty Loop 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 143 142 bng 15 250 50 0 empty empty play 17 7 0 10 -262144 -1
+-1;
+#X obj 33 104 spigot 0;
+#X text 126 268 Chopping Block Guitar is a riff in GarageBand;
+#X obj 34 216 tabplay~ sample;
+#X obj 164 182 openpanel;
+#X obj 144 104 bng 15 250 50 0 empty empty find 17 7 0 10 -262144 -1
+-1;
+#X msg 166 208 read -resize \$1 sample;
+#X msg 18 49 read -resize ./AnechoicFlamencoGuitar.wav sample;
+#X obj 104 164 mtof;
+#X floatatom 104 143 5 0 127 0 - - -;
+#X obj 105 125 tgl 15 0 empty empty s/w 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 104 186 osc~ 100;
+#X obj 34 239 expr~ if($f3==1 \, $v2 \, $v1);
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 5 0 7 1;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 9 0 18 0;
+#X connect 9 1 7 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 12 0 3 0;
+#X connect 13 0 3 0;
+#X connect 14 0 17 0;
+#X connect 15 0 14 0;
+#X connect 16 0 18 2;
+#X connect 17 0 18 1;
+#X connect 18 0 4 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
