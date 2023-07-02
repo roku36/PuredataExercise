@@ -1,4 +1,4 @@
-#N canvas 1290 397 616 418 12;
+#N canvas 757 276 880 669 12;
 #X obj 85 49 adc~;
 #X obj 85 292 output~;
 #X obj 86 156 *~;
@@ -12,6 +12,17 @@
 #X obj 164 176 r~ feedback;
 #X obj 392 203 *~;
 #X obj 427 169 hsl 162 19 0 1 0 0 empty empty feedback_ampt -2 -10 0 12 #c6ffc7 #000000 #000000 0 1;
+#X obj 336 399 key-keyboard;
+#X obj 191 509 output~;
+#X obj 225 461 osc~;
+#X obj 641 554 print note;
+#X obj 600 399 makenote 100 1000;
+#X obj 584 466 noteout;
+#X floatatom 605 340 5 0 0 0 - - - 0;
+#X msg 531 393 100;
+#X obj 334 487 mtof;
+#X obj 337 621 output~;
+#X obj 332 534 osc~;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 2 0 1 1;
@@ -25,3 +36,14 @@
 #X connect 11 0 8 1;
 #X connect 11 0 9 0;
 #X connect 12 0 11 1;
+#X connect 13 0 21 0;
+#X connect 15 0 14 0;
+#X connect 15 0 14 1;
+#X connect 17 0 18 0;
+#X connect 17 1 18 1;
+#X connect 19 0 17 0;
+#X connect 20 0 18 0;
+#X connect 20 0 18 1;
+#X connect 21 0 23 0;
+#X connect 23 0 22 0;
+#X connect 23 0 22 1;
