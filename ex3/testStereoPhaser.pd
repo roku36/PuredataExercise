@@ -1,0 +1,7 @@
+#N canvas 275 267 450 300 12;
+#X obj 123 134 stereoPhaser;
+#X obj 121 48 play;
+#X obj 151 227 output~;
+#X connect 0 0 2 0;
+#X connect 0 1 2 1;
+#X connect 1 0 0 0;
