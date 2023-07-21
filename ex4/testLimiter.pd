@@ -1,0 +1,9 @@
+#N canvas 1034 428 564 558 12;
+#X obj 47 104 Limiter;
+#X obj 57 217 output~;
+#X obj 38 336 timeDisplay;
+#X obj 39 29 play;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 1 1;
+#X connect 3 0 0 0;
